@@ -1,0 +1,56 @@
+import { Box, Stack, Typography } from "@mui/material";
+import React from "react";
+const Section1 = () => {
+  return (
+    <>
+      <Box sx={{ height: "100vh" }} flexWrap={"wrap"}>
+        <Stack
+          direction={"column"}
+          alignItems={"center"}
+          flexWrap={"wrap"}
+          sx={{
+            height: "100vh",
+            color: "#fff",
+            // marginTop: -10,
+            // paddingRight: 10,
+            justifyContent: "center",
+            alignItems: "end",
+          }}
+          style={{
+            backgroundImage: `url(https://images.pexels.com/photos/19488937/pexels-photo-19488937/free-photo-of-crowd-of-protesters-with-palestinian-flags.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`,
+            backgroundSize: "cover",
+            
+          }}
+        >
+          <Stack
+            sx={{
+              backgroundColor: "#000",
+              borderRadius: "10px",
+              padding: 2,
+              "&:hover": {
+                backgroundColor: "#fff",
+                borderRadius: "10px",
+                color: "#000",
+                transform: "scale(1.01)",
+                transition: "0.8s",
+              },
+            }}
+            flexWrap={"wrap"}
+            mr={2}
+          >
+            <Typography component={"h2"} variant="h3">
+              Hello I'm Palastine
+            </Typography>
+            <Typography component={"p"} variant="p" textAlign={"center"}>
+              officially the State of Palestine, is a country in the southern
+              Levant region of West Asia.
+              <br /> Quisque vel nunc eget arcu maximus{" "}
+            </Typography>
+          </Stack>
+        </Stack>
+      </Box>
+    </>
+  );
+};
+
+export default Section1;

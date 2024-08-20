@@ -1,6 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import { MyThemeContext } from "../../Context/ThemeContext";
 const Section1 = () => {
+  const { mode } = useContext(MyThemeContext);
   return (
     <>
       <Box sx={{ height: "100vh" }} flexWrap={"wrap"}>
@@ -10,7 +12,7 @@ const Section1 = () => {
           flexWrap={"wrap"}
           sx={{
             height: "100vh",
-            color: "#fff",
+            // color: "#fff",
             // marginTop: -10,
             // paddingRight: 10,
             justifyContent: "center",
@@ -19,7 +21,6 @@ const Section1 = () => {
           style={{
             backgroundImage: `url(https://images.pexels.com/photos/19488937/pexels-photo-19488937/free-photo-of-crowd-of-protesters-with-palestinian-flags.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`,
             backgroundSize: "cover",
-            
           }}
         >
           <Stack
@@ -38,10 +39,19 @@ const Section1 = () => {
             flexWrap={"wrap"}
             mr={2}
           >
-            <Typography component={"h2"} variant="h3">
+            <Typography
+              component={"h2"}
+              variant="h3"
+              color={mode === "dark" ? "#0f0" : "#f0f"}
+            >
               Hello I'm Palastine
             </Typography>
-            <Typography component={"p"} variant="p" textAlign={"center"}>
+            <Typography
+              component={"p"}
+              variant="p"
+              textAlign={"center"}
+              color={mode === "dark" ? "#0f0" : "#f0f"}
+            >
               officially the State of Palestine, is a country in the southern
               Levant region of West Asia.
               <br /> Quisque vel nunc eget arcu maximus{" "}

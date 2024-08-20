@@ -16,6 +16,7 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { hover } from "../Home/Home";
+import ThemToggler from "../ThemeToggle/ThemeToggle";
 export default function NavBar() {
   const [open, setOpen] = React.useState(false);
 
@@ -55,20 +56,13 @@ export default function NavBar() {
     <Box
       sx={{
         flexGrow: 1,
-        color: "#000",
-        "&:hover": {
-          backgroundColor: "#000",
-          color: "#fff",
-          transition: "0.5s",
-        },
+        // color: "#000",
+        // backgroundColor:"#7682CC"
       }}
     >
       <AppBar position="static" color="transparent">
         <Toolbar>
-          <Button
-            onClick={toggleDrawer(true)}
-            sx={{ mr: 2,...hover,color:"#000" }}
-          >
+          <Button onClick={toggleDrawer(true)} sx={{ mr: 2, ...hover }}>
             <MenuIcon />
           </Button>
           <Drawer open={open} onClose={toggleDrawer(false)}>
@@ -79,6 +73,9 @@ export default function NavBar() {
               Home
             </Button>
           </Typography>
+          <Box>
+            <ThemToggler />
+          </Box>
 
           <Button href="/login" color="inherit">
             Login

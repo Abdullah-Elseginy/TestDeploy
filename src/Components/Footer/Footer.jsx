@@ -10,9 +10,8 @@ const Footer = () => {
       <Box
         sx={{
           width: "100%",
-          backgroundColor: "#7682CC",
+          // backgroundColor: "#7682CC",
           height: "200px",
-
         }}
       >
         <Stack
@@ -23,28 +22,32 @@ const Footer = () => {
           spacing={3}
           flexWrap={"wrap"}
         >
-          <Typography component={"h5"} variant="subtitle1" color={"#fff"}>
+          <Typography
+            component={"h5"}
+            variant="subtitle1"
+            //  color={"#fff"}
+          >
             hola our user you can viste us on social media
           </Typography>
           <Stack direction={"row"} spacing={2} flexWrap={"wrap"}>
             <FacebookOutlinedIcon
               sx={{
                 fontSize: 45,
-                color: "#fff",
+                // color: "#fff",
                 ...hover,
               }}
             />
             <InstagramIcon
               sx={{
                 fontSize: 45,
-                color: "#fff",
+                // color: "#fff",
                 ...hover,
               }}
             />
             <GoogleIcon
               sx={{
                 fontSize: 45,
-                color: "#fff",
+                // color: "#fff",
                 ...hover,
               }}
             />
